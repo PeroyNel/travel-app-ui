@@ -19,7 +19,7 @@ const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
   return (
-    <Tab.Navigator 
+    <Tab.Navigator
       screenOptions={{
         tabBarStyle: styles.tabBar,
         tabBarActiveTintColor: colours.orange,
@@ -33,7 +33,7 @@ const TabNavigator = () => {
           tabBarIcon: ({color}) => (
             <Entypo name="home" size={32} color={color} />
           ),
-          headerShown: false,
+          headerTitleAlign: 'center',
         }}
       />
       <Tab.Screen
@@ -43,7 +43,7 @@ const TabNavigator = () => {
           tabBarIcon: ({color}) => (
             <Entypo name="heart" size={32} color={color} />
           ),
-          headerShown: false,
+          headerTitleAlign: 'center',
         }}
       />
       <Tab.Screen
@@ -53,7 +53,7 @@ const TabNavigator = () => {
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="account" size={32} color={color} />
           ),
-          headerShown: false,
+          headerTitleAlign: 'center',
         }}
       />
     </Tab.Navigator>
@@ -64,8 +64,8 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="TabNavigator" component={TabNavigator} options={{headerShown: false}} />
-        <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen name="TabNavigator" component={TabNavigator} options={{headerShown: false}}/>
+        <Stack.Screen name="Details" component={Details} options={{headerShown: false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -77,6 +77,9 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
   },
+  TabNavigator: {
+    headerTitleAlign: 'center',
+  }
 });
 
 export default App;
