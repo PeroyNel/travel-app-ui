@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   },
   TabNavigator: {
     headerTitleAlign: 'center',
-  }
+  },
 });
 
 export default App;
