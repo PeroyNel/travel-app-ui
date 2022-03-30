@@ -23,6 +23,18 @@ const Home = ({navigation}) => {
 
             </View>
           </SafeAreaView>
+          {/* Header Section */}
+          <View style={styles.discoverWrapper}>
+            <Text style={styles.discoverTitle}>Discover</Text>
+            <View style={styles.discoverCategoriesWrapper}>
+              <Text style={[styles.discoverCategoryText, {color: colours.orange}]}>All</Text>
+              <Text style={styles.discoverCategoryText}>Destinations</Text>
+              <Text style={styles.discoverCategoryText}>Cities</Text>
+              <Text style={styles.discoverCategoryText}>Experiences</Text>
+            </View>
+            
+
+          </View>
         </ScrollView>
         
     </View>
@@ -45,6 +57,25 @@ const styles = StyleSheet.create({
     width: 52,
     height: 52,
     borderRadius: 10,
+  },
+  discoverWrapper: {
+    marginHorizontal: 20,
+    marginTop: 20,
+  },
+  discoverTitle: {
+    fontFamily: 'Lato-Bold',
+    fontSize: 32,
+    color: '#000000',
+  },
+  discoverCategoriesWrapper: {
+    flexDirection: 'row',
+    marginTop: 20,
+  },
+  discoverCategoryText: {
+    marginRight: 30,
+    fontFamily: 'Lato-Regular',
+    fontSize: 16,
+    color: colours.gray,
   },
 });
 
